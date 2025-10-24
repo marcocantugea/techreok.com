@@ -6,7 +6,8 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio - Desarrollador</title>
+    <title>Tech-Reok- Robust Engineering,
+Optimized Knowledge</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +23,8 @@ session_start();
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#inicio">
-                <i class="fas fa-code"></i> Mi Portafolio
+                <i class="fas fa-code"></i> Tech-Reok- Robust Engineering,
+Optimized Knowledge
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -49,12 +51,15 @@ session_start();
             <div class="row align-items-center min-vh-100">
                 <div class="col-lg-6">
                     <div class="hero-content">
-                        <h1 class="display-4 fw-bold mb-3">
-                            Hola, Soy <span class="text-primary">Desarrollador</span>
+                        <!-- Logo principal si está disponible -->
+                        <div class="mb-4">
+                            <img class="logo" src="assets/images/logo.png" alt="Logo TECH-REOK" onerror="this.style.display='none'">
+                        </div>
+                        <h1 class="display-4 fw-bold mb-3" style="color: #FF6F00;">
+                            Robust Engineering,<br>Optimized Knowledge
                         </h1>
-                        <p class="lead mb-4">
-                            Desarrollador Full Stack especializado en crear aplicaciones web modernas y escalables.
-                            Apasionado por la tecnología y siempre en busca de nuevos desafíos.
+                        <p class="lead mb-4" style="color: #C0C0C0;">
+                            "Robust Engineering, Optimized Knowledge" es una frase que transmite fuerza técnica y claridad conceptual. Ideal para proyectos de desarrollo que combinan ingeniería sólida con conocimiento refinado.
                         </p>
                         <div class="hero-buttons">
                             <a href="#proyectos" class="btn btn-primary btn-lg me-3">
@@ -75,7 +80,7 @@ session_start();
                 <div class="col-lg-6">
                     <div class="hero-image text-center">
                         <div class="code-animation">
-                            <i class="fas fa-code fa-10x text-primary opacity-75"></i>
+                            <i class="fas fa-code fa-10x" style="color: #FF6F00; opacity: 0.85;"></i>
                         </div>
                     </div>
                 </div>

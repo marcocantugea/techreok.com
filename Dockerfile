@@ -5,15 +5,22 @@ FROM php:8.2-apache
 RUN docker-php-ext-install mysqli pdo pdo_mysql && \
     a2enmod rewrite
 
-# Copiar archivos del proyecto al contenedor
+# Copiar todos los archivos del proyecto al contenedor
 COPY . /var/www/html/
 
-# Asignar permisos adecuados
-RUN chown -R www-data:www-data /var/www/html && \
-    chmod -R 755 /var/www/html
+# Asignar permisos adecuados (desde /var/www)
+RUN chown -R www-data:www-data /var/www && \
+    find /var/www -type d -exec chmod 755 {} \; && \
+    find /var/www -type f -exec chmod 644 {} \; && \
+    chown www-data:www-data /var/www/html/.htaccess && \
+    chmod 644 /var/www/html/.htaccess
 
-# Configuración recomendada de Apache
-COPY .htaccess /var/www/html/.htaccess
+# Eliminar atributos de fin de línea de Windows (CRLF) en todos los archivos
+RUN apt-get update && apt-get install -y dos2unix && \
+    find /var/www/html -type f -exec dos2unix {} \;
+
+# Eliminar advertencia de ServerName
+RUN echo 'ServerName localhost' >> /etc/apache2/apache2.conf
 
 # Exponer el puerto 80
 EXPOSE 80
