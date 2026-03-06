@@ -6,7 +6,7 @@
 SRC_DIR="$(pwd)/"  # Directorio actual (raíz del proyecto)
 DEST_USER="mcantu"
 DEST_HOST="192.168.100.41"
-DEST_PATH="/home/mcantu/techreok.com"
+DEST_PATH="/home/mcantu/devs/techreok.com"
 # Ruta absoluta de la llave SSH en Cygwin/Git Bash (ajusta si es necesario)
 SSH_KEY="/cygdrive/c/Users/\"Marco Cantu\"/.ssh/mcantu_keys-20250113T042235Z-001/mcantu_keys/id_rsa"
 
